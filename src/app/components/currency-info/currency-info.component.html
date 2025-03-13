@@ -1,0 +1,24 @@
+<div class="card minimal-card border-0">
+  <div class="card-header minimal-card-header text-center py-2">
+    <h5 class="card-title mb-0">Información de Moneda Local</h5>
+  </div>
+  <div class="card-body minimal-card-body text-center">
+    <p class="card-text mb-2">
+      <strong>Ciudad:</strong> {{ currencyData()?.cityName }}
+    </p>
+    <p class="card-text mb-2">
+      <strong>Código de Moneda:</strong>
+      <span class="badge bg-secondary">
+        {{ currencyData()?.currency_code }}
+      </span>
+    </p>
+    <p class="card-text mb-0">
+      <strong>Símbolo:</strong> {{ currencyData()?.currency_symbol }}
+    </p>
+  </div>
+  <div class="card-footer minimal-card-footer text-center py-2">
+    <small class="text-muted">
+      Moneda local de {{ currencyData()?.cityName }}
+    </small>
+  </div>
+</div>

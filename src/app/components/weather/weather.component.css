@@ -1,0 +1,11 @@
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  height: 100%;
+
+}
+
+.card-body {
+  padding: 15px;
+}

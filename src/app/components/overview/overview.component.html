@@ -1,0 +1,30 @@
+<div class="overview-grid">
+  <!-- Fila 1  -->
+  <div class="flight">
+    <app-flight-quotes [flightQuotesData]="flightService.flightData"></app-flight-quotes>
+  </div>
+
+  <!-- Fila 2  -->
+  <div class="info-stack">
+    <app-currency-info [currencyData]="currencyService.currencyData"></app-currency-info>
+    <app-location-budget
+      [country]="currencyService.currencyCountry"
+      [city]="currencyService.currencyData.cityName"
+      [budget]="budgetService.budgetInCOP">
+    </app-location-budget>
+  </div>
+
+  <!-- Fila 2  Columna derecha  -->
+  <div class="weather">
+    <app-weather [weatherData]="weatherService.weatherData"></app-weather>
+  </div>
+
+  <!-- Fila 3  -->
+  <div class="converter">
+    <app-budget-converter
+      [budgetInfo]="budgetService.budgetData"
+      [currencyData]="currencyService.currencyData"
+      [budgetInCOP]="budgetService.budgetInCOP">
+    </app-budget-converter>
+  </div>
+</div>

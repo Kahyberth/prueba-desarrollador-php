@@ -1,0 +1,38 @@
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  padding: 16px;
+
+  grid-template-areas:
+    "flight flight"
+    "info weather"
+    "converter converter";
+}
+
+
+.flight {
+  grid-area: flight;
+}
+
+.info-stack {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.weather {
+  grid-area: weather;
+}
+
+.converter {
+  grid-area: converter;
+}
+
+
+.overview-grid > div > .card {
+  width: 100% !important;
+  margin: 0 !important;
+}

@@ -1,0 +1,17 @@
+<div class="card minimal-card shadow-sm border-0">
+  <div class="card-body minimal-card-body text-center">
+    <h5 class="card-title">{{ country() }}</h5>
+    <p class="card-text mb-2">{{ city() }}</p>
+    <p class="card-text mb-2">
+      <strong>Presupuesto:</strong> {{ budget() | currency:'COP':'symbol':'1.0-0' }}
+    </p>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <span *ngIf="isDay; else nightTemplate" class="fs-2 me-2">🌤</span>
+      <ng-template #nightTemplate>
+        <span class="fs-2 me-2">🌙✨</span>
+      </ng-template>
+      <span class="fw-bold">{{ isDay ? 'Día' : 'Noche' }}</span>
+    </div>
+  </div>
+</div>

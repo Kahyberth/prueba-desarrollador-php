@@ -1,0 +1,11 @@
+.country-city-card {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.country-city-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

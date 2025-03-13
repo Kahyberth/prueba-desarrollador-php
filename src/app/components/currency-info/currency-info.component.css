@@ -1,0 +1,23 @@
+.minimal-card {
+  border-radius: 0.5rem;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.minimal-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.minimal-card-header {
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.minimal-card-body {
+  padding: 1.5rem;
+}
+
+.minimal-card-footer {
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}

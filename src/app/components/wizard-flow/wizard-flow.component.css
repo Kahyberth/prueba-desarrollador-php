@@ -1,0 +1,18 @@
+.wizard-flow {
+  max-width: 600px;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+}
+
+.wizard-flow .card-header {
+  background: #f8f9fa;
+}
+
+.progress {
+  height: 20px;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  transition: width 0.4s ease;
+}

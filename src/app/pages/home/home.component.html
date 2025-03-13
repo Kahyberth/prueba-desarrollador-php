@@ -1,0 +1,24 @@
+<div class="home-content">
+  <div class="container">
+    <section class="welcome-section mb-5">
+      <div class="text-center">
+        <h1 class="section-title">¡Bienvenido a {{ currencyService.currencyData.cityName }}!</h1>
+        <p class="section-subtitle">Descubre todo lo que necesitas saber para tu viaje</p>
+      </div>
+    </section>
+    <section class="overview-section mb-5">
+        <app-overview></app-overview>
+    </section>
+    <section class="hotels-section mb-5">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Hoteles en la Ciudad</h2>
+        <p class="section-subtitle">Explora los alojamientos destacados para tu viaje</p>
+      </div>
+      <app-hotels-carousel [hotels]="hotelService.hotels"></app-hotels-carousel>
+    </section>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,15 @@
+.budget-converter-card {
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.budget-converter-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+hr.my-2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}

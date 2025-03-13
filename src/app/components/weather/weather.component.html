@@ -1,0 +1,17 @@
+@if (weatherData()) {
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ weatherData()?.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ weatherData().weather[0].main }}</h6>
+      <p class="card-text">
+        <strong>Temperature:</strong> {{ weatherData().main.temp }}°F<br>
+        <strong>Feels like:</strong> {{ weatherData().main.feels_like }}°F<br>
+        <strong>Humidity:</strong> {{ weatherData().main.humidity }}%<br>
+        <strong>Wind Speed:</strong> {{ weatherData().wind.speed }} mph<br>
+        <strong>Description:</strong> {{ weatherData().weather[0].description }}
+      </p>
+      <img [src]="'http://openweathermap.org/img/wn/' + weatherData().weather[0].icon + '@2x.png'" alt="Weather icon">
+    </div>
+  </div>
+}
+

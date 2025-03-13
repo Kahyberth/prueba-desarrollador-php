@@ -1,0 +1,76 @@
+<div class="wizard-flow card shadow">
+  <div class="card-header text-center bg-light">
+    <h3 class="mb-0">Asistente de viaje</h3>
+  </div>
+
+  <!-- Loader overlay  -->
+
+  @if (isLoading) {
+  <div class="loader-overlay">
+    <div class="spinner-border text-primary" role="status"></div>
+    <span class="text-white mt-3">Cargando...</span>
+  </div>
+  }
+
+  <div class="card-body">
+    <div class="progress mb-4">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        [style.width]="(currentStep + 1) * 33 + '%'"
+        [attr.aria-valuenow]="(currentStep + 1) * 33"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        Paso {{ currentStep + 1 }} de 3
+      </div>
+    </div>
+
+    <!-- Paso 1: CountryCitySelector -->
+
+    @if (currentStep === 0) {
+    <app-country-city-selector (validChange)="onChildValidChange($event)">
+    </app-country-city-selector>
+    }
+
+    <!-- Paso 2: TravelBudget -->
+
+    @if(currentStep === 1) {
+    <app-travel-budget (validChange)="onChildValidChange($event)">
+    </app-travel-budget>
+    }
+
+    <!-- Paso 3: Home -->
+    @if (currentStep === 2) {
+    <app-home></app-home>
+    }
+  </div>
+
+  <div class="card-footer d-flex justify-content-between">
+    <button *ngIf="!isLastStep()"
+      class="btn btn-outline-secondary"
+      [disabled]="isFirstStep() || isLoading"
+      (click)="previousStep()"
+    >
+      Atrás
+    </button>
+
+    <div>
+
+      @if(isLastStep() && !isLoading) {
+      <button class="btn btn-success" (click)="resetWizard()">
+        Volver al inicio
+      </button>
+      }
+
+      <button
+        *ngIf="!isLastStep()"
+        class="btn btn-primary"
+        [disabled]="!isStepValid || isLoading"
+        (click)="nextStep()"
+      >
+        Siguiente
+      </button>
+    </div>
+  </div>
+</div>
